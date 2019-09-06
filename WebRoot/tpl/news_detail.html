@@ -1,0 +1,18 @@
+<div class="news_detail">
+    <div class="news_detail_header">
+        <h2>新闻详情</h2>
+    </div>
+    <div class="news_detail_main">
+        <div class="news_detail_title">
+            <h4>{{detail.title}}</h4>
+            <p>发布人：<span>{{detail.user_name}}</span></p>
+            <p>&nbsp;|&nbsp;</p>
+            <p>发布时间：<span>{{detail.post_time | date:'yyyy-MM-dd HH:mm:ss'}}</span></p>
+            <p>&nbsp;|&nbsp;</p>
+            <p>新闻分类：<span>{{detail.type}}</span></p>
+        </div>
+        <div class="news_detail_article">
+            <p ng-bind-html="detail.content | to_trusted"></p>
+        </div>
+    </div>
+</div>

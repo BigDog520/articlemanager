@@ -1,0 +1,17 @@
+<div class="my_news">
+    <div class="my_news_header">
+        <h2>我的新闻</h2>
+        <input type="text" class="form-control" placeholder="Search">
+        <button type="submit" class="btn btn-info">查找</button>
+    </div>
+    <div class="my_news_main"  ng-repeat="item in myNews">
+        <div class="my_news_content">
+            <h3>{{item.title}}</h3>
+            <p>发布时间：<span>{{item.post_time | date:'yyyy-MM-dd HH:mm:ss'}}</span></p>
+            <p>&nbsp;|&nbsp;</p>
+            <p>新闻分类：<span>{{item.type}}</span></p>
+            <a ng-click="delete(item.news_id)" class="btn btn-danger">删除</a>
+            <a href="#/update?news_id={{item.news_id}}&user_id={{user_id}}&username={{name}}" class="btn btn-success">修改</a>
+        </div>
+    </div>
+</div>

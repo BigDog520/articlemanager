@@ -1,0 +1,178 @@
+.ribbon {
+  display: inline-block;
+}
+
+.ribbon:after,
+.ribbon:before {
+  margin-top: 0.5em;
+  content: "";
+  float: left;
+  border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+  border-right-color: transparent;
+}
+
+.ribbon:before {
+  border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+  color: #000;
+  text-decoration: none;
+  float: left;
+  height: 3.5em;
+  overflow: hidden;
+}
+
+.ribbon span {
+  background: #fff;
+  display: inline-block;
+  line-height: 3em;
+  padding: 0 1em;
+  margin-top: 0.5em;
+  position: relative;
+  -webkit-transition: background-color 0.2s, margin-top 0.2s;
+  /* Saf3.2+, Chrome */
+  -moz-transition: background-color 0.2s, margin-top 0.2s;
+  /* FF4+ */
+  -ms-transition: background-color 0.2s, margin-top 0.2s;
+  /* IE10 */
+  -o-transition: background-color 0.2s, margin-top 0.2s;
+  /* Opera 10.5+ */
+  transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+  background: #ffd204;
+  margin-top: 0;
+}
+
+.ribbon span:before {
+  content: "";
+  position: absolute;
+  top: 3em;
+  left: 0;
+  border-right: 0.5em solid #9b8651;
+  border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+  content: "";
+  position: absolute;
+  top: 3em;
+  right: 0;
+  border-left: 0.5em solid #9b8651;
+  border-bottom: 0.5em solid #fff;
+}
+
+.register,
+.login {
+  background: url("../img/login.jpg") no-repeat;
+  height: 621px;
+  width: 1366px;
+  margin-top: -20px;
+  position: relative;
+}
+.register_content,
+.login_content {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 500px;
+  top: 160px;
+  height: 330px;
+  width: 360px;
+}
+.register_content h2,
+.login_content h2 {
+  margin-left: 150px;
+}
+.login_content .form-group {
+  margin: 10px;
+}
+
+.error {
+  color: red;
+  float: right;
+}
+.hidden {
+  visibility: hidden;
+}
+
+.register_content {
+  height: 420px;
+  left: 500px;
+  top: 100px;
+}
+.register_content form input {
+  width: 96%;
+  margin: 2%;
+}
+.register_content .form-group {
+  margin-bottom: 0;
+}
+.register_content .ridio input {
+  width: 10px;
+  margin-left: 12px;
+}
+.my_news,
+.news_detail,
+.news_index {
+  width: 90%;
+  margin: auto auto;
+}
+.my_news_header input,
+.news_index_header input {
+  width: 30%;
+  float: left;
+  margin-right: 10px;
+}
+.my_news_header,
+.news_detail_header,
+.news_index_header {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #ccc;
+}
+.my_news_main,
+.news_content {
+  padding: 20px 15px;
+  border-bottom: 1px solid #ccc;
+}
+.my_news_content p,
+.news_detail_title p,
+.news_content p {
+  display: inline;
+  color: #999;
+  font-size: 13px;
+}
+.my_news_content h3,
+.news_content h3 {
+  color: dodgerblue;
+  margin: 0 0 15px 5px;
+  font-size: 20px;
+}
+.news_detail_title {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.my_news_content button{
+  margin-left: 5%;
+}
+.publish{
+  text-align: center;  
+  margin: 20px;
+}
+.publish select{
+  width: 100px;
+  margin:10px 0;
+}
+.publish textarea{
+  resize: none;
+  height:300px;
+  width:100%;
+}
+.ridio label{
+	width:50px;
+}

@@ -1,0 +1,17 @@
+<div class="news_index">
+        <div class="news_index_header">
+            <h2>最新新闻</h2>
+            <input type="text" class="form-control" placeholder="Search" ng-model="searchdata">
+            <button type="submit" class="btn btn-info" ng-click="search()">查找</button>
+        </div>
+        <div class="news_index_main">
+            
+            <div class="news_content" ng-repeat="item in index">
+                <a href="#/newsDetail?news_id={{item.news_id}}"><h3>{{item.title}}</h3></a>
+                <p>发布时间：<span>{{item.post_time | date:'yyyy-MM-dd HH:mm:ss'}}</span></p>
+                <p>&nbsp;|&nbsp;</p>
+                <p>新闻分类：<span>{{item.type}}</span></p>
+            </div>
+
+        </div>
+    </div>

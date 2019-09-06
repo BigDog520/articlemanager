@@ -1,0 +1,33 @@
+<div class="publish">
+    <h2>新闻发布</h2>
+    <input type="text" class="form-control" placeholder="Title" ng-model="title">
+    <select  class="form-control" ng-model="type">
+        <option>教育</option>
+        <option>游戏</option>
+        <option>热点</option>
+        <option>科技</option>
+        <option>金融</option>
+    </select>
+    <textarea name="content" class="form-control"  placeholder="Your article..." ng-model="content"></textarea>
+    <button class="btn btn-success " style="margin-top:20px;" ng-click="public()">发布</button>
+    
+     <script type="text/javascript">
+	    //KindEditor脚本
+	    var editor;
+	    KindEditor.ready(function(K) {
+	        editor = K.create('textarea[name="content"]', {
+	        	uploadJson:'upload_json.jsp',
+	        	fileManagerJson:'file_manager_json.jsp',
+	        	allowFileManager:true
+	        });
+	    });
+/*
+	    var public_ = function(){
+	    	console.log("1")
+	    	editor.sync();//将KindEditor的数据同步到textarea标签。
+			var value_content = $('textarea[name="content"]').val();
+			console.log(value_content);
+	    }
+	    */
+</script>	
+</div>

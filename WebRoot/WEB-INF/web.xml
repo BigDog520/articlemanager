@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>Servlet_sql</servlet-name>
+    <servlet-class>Servlet.Servlet_sql</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>Servlet_sql</servlet-name>
+    <url-pattern>/Servlet_sql</url-pattern>
+  </servlet-mapping>
+
+<filter>
+		<filter-name>CharsetEncodingFilter</filter-name>
+		<filter-class>EncodingFilter.filter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	
+	<!-- 对哪些起作用,对jsp还是servlet -->
+	<filter-mapping>
+		<filter-name>CharsetEncodingFilter</filter-name>
+		<!-- 配置一下,让谁使用Filter,这里配置的是对所有的jsp起作用 -->
+		
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+<!--  	
+<filter>
+	<filter-name>1</filter-name>
+	<filter-class>EncodingFilter.MyFilter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>1</filter-name>
+	<url-pattern>/*</url-pattern>
+</filter-mapping>
+-->	
+</web-app>

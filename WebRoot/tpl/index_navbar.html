@@ -1,0 +1,35 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2"
+                aria-expanded="false">
+        <span class="sr-only">菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="#/newsIndex">BD文章管理系统</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class='ribbon'>
+                        <a href='#/newsIndex?user_id={{user_id}}&username={{name}}'><span>新闻首页</span></a>
+                        <a href='#/myNews?user_id={{user_id}}&username={{name}}'><span>我的新闻</span></a>
+                        <a href='#/publish?user_id={{user_id}}&username={{name}}' ng-click="reloadCurPage('#/publish')"><span>快速发布</span></a>
+                    </div>
+                </li>
+                <!--<li class="active"><a href="#/newsIndex">新闻首页</a></li>
+                    <li><a href="#">我的新闻</a></li>
+                    <li><a href="#">快速发布</a></li>-->
+                <li style="padding-right:10px;">
+                    <p class="navbar-text navbar-right">欢迎您，<a class="navbar-link">{{name}}</a></p>
+                </li>
+                <li ng-click="exit()"><a href="#/login">退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
